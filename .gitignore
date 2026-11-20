@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Виртуальное окружение
+.venv/
+venv/
+
+# Секреты и переменные окружения
+.env
+.env.*
+
+# Исключение для примера настроек
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# Системные файлы
+.DS_Store
