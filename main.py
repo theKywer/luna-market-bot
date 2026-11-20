@@ -1,4 +1,4 @@
-
+from bot.telegram_link import router as telegram_link_router
 import asyncio
 import logging
 import os
@@ -26,6 +26,7 @@ async def main():
     dp = Dispatcher()
 
     # Подключаем обработчики
+    dp.include_router(telegram_link_router)
     dp.include_router(router)
 
     logging.info("🌙 Luna Market Bot запущен!")
