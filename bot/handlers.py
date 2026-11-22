@@ -377,17 +377,6 @@ async def search_invalid_handler(message: Message):
 # Мои заказы
 
 
-# Поддержка
-@router.message(F.text == "💬 Поддержка")
-async def support_handler(message: Message, state: FSMContext):
-    await state.clear()
-
-    await message.answer(
-        "💬 Поддержка Luna Market\n\n"
-        "Раздел находится в разработке."
-    )
-
-
 # Неизвестные сообщения
 @router.message()
 async def unknown_handler(message: Message):

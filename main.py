@@ -3,6 +3,7 @@ import asyncio
 import logging
 import os
 from bot.orders import router as orders_router
+from bot.support.handlers import router as support_router
 
 from aiogram import Bot, Dispatcher
 from dotenv import load_dotenv
@@ -29,6 +30,7 @@ async def main():
     # Подключаем обработчики
     dp.include_router(telegram_link_router)
     dp.include_router(orders_router)
+    dp.include_router(support_router)
     dp.include_router(router)
 
     logging.info("🌙 Luna Market Bot запущен!")
