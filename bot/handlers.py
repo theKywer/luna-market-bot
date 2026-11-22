@@ -375,14 +375,6 @@ async def search_invalid_handler(message: Message):
 
 
 # Мои заказы
-@router.message(F.text == "📦 Мои заказы")
-async def orders_handler(message: Message, state: FSMContext):
-    await state.clear()
-
-    await message.answer(
-        "📦 Мои заказы\n\n"
-        "Скоро здесь появится история заказов."
-    )
 
 
 # Поддержка
